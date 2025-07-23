@@ -1,0 +1,5 @@
+repos:
+-   repo: https://github.com/Praxinos/Lib-PreCommitHooks-Python
+    rev: dev
+    hooks:
+    -   id: check-only-spaces

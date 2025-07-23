@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "more-pre-commit-hooks"
+version = "0.1.0"
+authors = [
+  { name="Praxinos", email="contact@praxinos.coop" },
+]
+description = "Some additional hooks to check code source"
+readme = "README.md"
+requires-python = ">=3.13"
+classifiers = [
+    # https://pypi.org/classifiers/
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+
+    # https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#classifiers
+    "Private :: Do Not Upload",
+]
+
+[project.urls]
+homepage = "https://praxinos.coop"
+source = "https://github.com/praxinos/Lib-PreCommitHooks-Python.git"
+issues = "https://github.com/praxinos/Lib-PreCommitHooks-Python/issues"
+
+[project.scripts]
+check-only-spaces = "more_pre_commit_hooks.check_only_spaces:main"

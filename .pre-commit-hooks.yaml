@@ -1,0 +1,37 @@
+
+# -   id: check-utf8-wihtout-byte-order-marker
+#     name: check-utf8-wihtout-byte-order-marker
+#     description: ensure files are utf-8 *without* BOM.
+#     entry: check-utf8-wihtout-byte-order-marker
+#     language: python
+#     types: [text]
+
+# -   id: check-end-of-file
+#     name: check-end-of-file
+#     description: ensures that a file is either empty, or ends with one newline.
+#     entry: check-end-of-file
+#     language: python
+#     types: [text]
+#     # stages: [pre-commit, pre-push, manual]
+#     # minimum_pre_commit_version: 3.2.0
+
+-   id: check-only-spaces
+    name: check-only-spaces
+    description: ensure files only contain spaces.
+    entry: check-only-spaces
+    language: python
+    types: [text]
+
+# -   id: check-iddn-exists
+#     name: check-iddn-exists
+#     description: ensure files start with iddn.
+#     entry: check-iddn-exists
+#     language: python
+#     types: [text]
+
+# -   id: check-copyright-exists
+#     name: check-copyright-exists
+#     description: ensure files start with copyright.
+#     entry: check-copyright-exists
+#     language: python
+#     types: [text]
