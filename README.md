@@ -19,3 +19,4 @@ Check if all files starts with iddn/copyright comment
 - `python.exe -m pip install --upgrade pip`
 - `pip install -r .\.requirements-dev.txt`
 - `pre-commit try-repo . check-only-spaces --verbose --all-files`
+- `pre-commit try-repo . --verbose --all-files`
