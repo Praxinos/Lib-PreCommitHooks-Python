@@ -8,8 +8,6 @@ repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v5.0.0
     hooks:
-    # - id: trailing-whitespace
-    #   args: [--markdown-linebreak-ext=md]
     - id: mixed-line-ending
       args: [--fix=no]
 
@@ -26,3 +24,5 @@ repos:
     -   id: check-only-spaces
     -   id: check-single-newline-end-of-file
     -   id: check-utf8-wihtout-byte-order-marker
+    -   id: check-no-trailing-spaces
+        args: [--markdown-linebreak-ext=md]
