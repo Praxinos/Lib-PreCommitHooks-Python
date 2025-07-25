@@ -15,6 +15,13 @@
     # stages: [pre-commit, pre-push, manual]
     # minimum_pre_commit_version: 3.2.0
 
+# -   id: check-no-trailing-spaces
+#     name: check-no-trailing-spaces
+#     description: ensure files don't contain trailing spaces.
+#     entry: check-no-trailing-spaces
+#     language: python
+#     types: [text]
+
 -   id: check-only-spaces
     name: check-only-spaces
     description: ensure files only contain spaces.

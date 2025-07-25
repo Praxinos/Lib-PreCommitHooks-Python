@@ -72,5 +72,6 @@ commands = [
 #     "pre-commit",
 #     ]
 # commands = [
+#     [ "pre-commit", "clean" ], # To be able to get the last version of the branch
 #     [ "pre-commit", "run", "--all-files" ], # This will clone and use the repositories inside .pre-commit-config.yaml
 #     ]
