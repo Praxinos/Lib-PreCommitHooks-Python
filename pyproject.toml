@@ -29,6 +29,7 @@ issues = "https://github.com/praxinos/Lib-PreCommitHooks-Python/issues"
 [project.scripts]
 check-only-spaces = "pre_commit_hooks_checker.check_only_spaces:main"
 check-single-newline-end-of-file = "pre_commit_hooks_checker.check_single_newline_end_of_file:main"
+check-utf8-wihtout-byte-order-marker = "pre_commit_hooks_checker.check_utf8_wihtout_byte_order_marker:main"
 
 ### TOX
 

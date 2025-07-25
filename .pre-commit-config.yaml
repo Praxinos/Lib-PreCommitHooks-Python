@@ -21,3 +21,4 @@ repos:
     hooks:
     -   id: check-only-spaces
     -   id: check-single-newline-end-of-file
+    -   id: check-utf8-wihtout-byte-order-marker

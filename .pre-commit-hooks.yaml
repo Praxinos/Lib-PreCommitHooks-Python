@@ -1,10 +1,10 @@
 
-# -   id: check-utf8-wihtout-byte-order-marker
-#     name: check-utf8-wihtout-byte-order-marker
-#     description: ensure files are utf-8 *without* BOM.
-#     entry: check-utf8-wihtout-byte-order-marker
-#     language: python
-#     types: [text]
+-   id: check-utf8-wihtout-byte-order-marker
+    name: check-utf8-wihtout-byte-order-marker
+    description: ensure files are utf-8 *without* BOM.
+    entry: check-utf8-wihtout-byte-order-marker
+    language: python
+    types: [text]
 
 -   id: check-single-newline-end-of-file
     name: check-single-newline-end-of-file
