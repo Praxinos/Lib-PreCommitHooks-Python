@@ -3,7 +3,7 @@ import io
 
 import pytest
 
-from more_pre_commit_hooks.check_only_spaces import main
+from pre_commit_hooks_checker.check_only_spaces import main
 
 #---
 
