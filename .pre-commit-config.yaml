@@ -20,3 +20,4 @@ repos:
     rev: dev
     hooks:
     -   id: check-only-spaces
+    -   id: check-single-newline-end-of-file

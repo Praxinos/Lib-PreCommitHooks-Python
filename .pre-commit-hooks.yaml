@@ -6,14 +6,14 @@
 #     language: python
 #     types: [text]
 
-# -   id: check-end-of-file
-#     name: check-end-of-file
-#     description: ensures that a file is either empty, or ends with one newline.
-#     entry: check-end-of-file
-#     language: python
-#     types: [text]
-#     # stages: [pre-commit, pre-push, manual]
-#     # minimum_pre_commit_version: 3.2.0
+-   id: check-single-newline-end-of-file
+    name: check-single-newline-end-of-file
+    description: ensures that a file is either empty, or ends with only one newline.
+    entry: check-single-newline-end-of-file
+    language: python
+    types: [text]
+    # stages: [pre-commit, pre-push, manual]
+    # minimum_pre_commit_version: 3.2.0
 
 -   id: check-only-spaces
     name: check-only-spaces
