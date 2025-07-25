@@ -28,3 +28,34 @@ issues = "https://github.com/praxinos/Lib-PreCommitHooks-Python/issues"
 
 [project.scripts]
 check-only-spaces = "more_pre_commit_hooks.check_only_spaces:main"
+
+### TOX
+
+[tool.tox]
+envlist = [
+    "tests",
+    # "pre-commit",
+    ]
+
+[tool.tox.env_run_base]
+
+[tool.tox.env.tests]
+description = "run tests"
+deps = [
+    "covdefaults",
+    "coverage",
+    "pytest",
+    ]
+commands = [
+    [ "coverage", "erase" ],
+    [ "coverage", "run", "-m", "pytest", { replace = "posargs", default = ["tests"], extend = true } ],
+    [ "coverage", "report" ],
+    ]
+
+# [tool.tox.env.pre-commit]
+# description = "run pre-commit check on code base"
+# skip_install = true
+# deps = [ "pre-commit" ]
+# commands = [
+#     ["pre-commit", "run", "--all-files", "--show-diff-on-failure" ],
+#     ]
