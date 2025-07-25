@@ -1,3 +1,9 @@
+
+exclude: |
+    (?x)^(
+        tests/resources/.* # Exclude files in resources as they are wrong for testing
+    )$
+
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v5.0.0
