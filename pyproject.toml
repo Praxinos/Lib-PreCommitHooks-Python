@@ -34,7 +34,8 @@ check-only-spaces = "pre_commit_hooks_checker.check_only_spaces:main"
 [tool.tox]
 envlist = [
     "tests",
-    # "pre-commit",
+    # "pc-local",
+    # "pc-remote",
     ]
 
 [tool.tox.env_run_base]
@@ -52,10 +53,22 @@ commands = [
     [ "coverage", "report" ],
     ]
 
-# [tool.tox.env.pre-commit]
+# [tool.tox.env.pc-local]
 # description = "run pre-commit check on code base"
 # skip_install = true
-# deps = [ "pre-commit" ]
+# deps = [
+#     "pre-commit",
+#     ]
 # commands = [
-#     ["pre-commit", "run", "--all-files", "--show-diff-on-failure" ],
+#     [ "pre-commit", "try-repo", ".", "--all-files" ], # This will call only hooks inside .pre-commit-hooks.yaml
+#     ]
+
+# [tool.tox.env.pc-remote]
+# description = "run pre-commit check on code base"
+# skip_install = true
+# deps = [
+#     "pre-commit",
+#     ]
+# commands = [
+#     [ "pre-commit", "run", "--all-files" ], # This will clone and use the repositories inside .pre-commit-config.yaml
 #     ]
