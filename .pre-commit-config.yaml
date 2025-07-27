@@ -18,7 +18,7 @@ repos:
     - id: check-case-conflict
     - id: check-merge-conflict
 
--   repo: https://github.com/Praxinos/Lib-PreCommitHooks-Python
+-   repo: https://github.com/Praxinos/Lib-PreCommitHooksChecker-Python
     rev: dev
     hooks:
     -   id: check-only-spaces
