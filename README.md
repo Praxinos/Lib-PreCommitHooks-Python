@@ -1,51 +1,63 @@
 
-# pre-commit hooks
+# pre-commit hooks checker
+All hooks don't modify files.  
+There are *read-only* checker.  
 
-## check spaces hook
+## check-utf8-wihtout-byte-order-marker hook
+Check if all files are utf8 **without** BOM
 
+## check-single-newline-end-of-file
+Check if all files end with only **1** end of line
+
+## check-no-trailing-spaces
+Check if there are no trailing spaces
+
+## check-only-spaces hook
 Check if all whitespaces are spaces (no tabs)
 
-## check iddn hook
+## check-copyright hook
+Check if all files starts with a valid copyright comment
 
-Check if all files starts with iddn/copyright comment
+## check iddn hook
+Check if all files starts with a valid iddn comment
+
 
 
 # DEV
 
-## Doc
+## Doc :blue_book:
 
-https://pre-commit.com/
+- https://pre-commit.com/
+- https://github.com/pre-commit/pre-commit-hooks
 
-## Test with local version of hooks on this repository itself
+## Tox *(for unit tests)*
 
 ### Setup
-- `py -m venv .venv-dev`
+- `py -m venv .venv-dev` *(if it doesn't exist)*
 - `.\.venv-dev\Scripts\activate`
-- `python.exe -m pip install --upgrade pip`
-- `pip install --upgrade -r .\.requirements-dev.txt`
+- `(.venv-dev)> python.exe -m pip install --upgrade pip`
+- `(.venv-dev)> pip install --upgrade -r .\.requirements-dev.txt`
 
-### Testing
-Use all hooks defined in `.pre-commit-hooks.yaml`:
-- `pre-commit try-repo . --verbose --all-files`
+### Usage
+- `(.venv-dev)> tox`
 
-or just a specific hook:
-- `pre-commit try-repo . check-only-spaces --verbose --all-files`
+To quickly test specific environment:  
+*(which is one of the values in `pyproject.toml` in `envlist` attribute)*
+- `(.venv-dev)> tox -e {my_specific_env}`
 
-The `.` here is to test the hooks on this repository itself.  
-*(This is the only reason why there is a `venv` here to have the `pre-commit` command available)*  
+## Use these hooks on this repository itself
 
-## Test with local version of hooks on another repository
+### Setup
+- `py -m venv .venv-dev` *(if it doesn't exist)*
+- `.\.venv-dev\Scripts\activate`
+- `(.venv-dev)> python.exe -m pip install --upgrade pip`
+- `(.venv-dev)> pip install --upgrade -r .\.requirements-dev.txt`
 
-- `cd path/to/another/repository`
-The `venv` of this another repository must have installed `pre-commit`  
-- `pre-commit try-repo path/to/THIS/repository/where/there/is/.pre_commit_hooks.yaml --verbose --all-files`
+### Use this local version of hooks
+- `(.venv-dev)> pre-commit try-repo . --all-files`  
+*All local modifications are taken into account, but use **only** hooks defined in `.pre-commit-hooks.yaml`*
 
-## Test with github version of hooks
-
-*(use .pre-commit-config.yaml)*
-- `pre-commit clean`
-- `pre-commit run --verbose --all-files`
-
-or
-- `pre-commit autoupdate`  
-*(but this will lead to a new commit)*  
+### Use the github version of hooks
+- `(.venv-dev)> pre-commit clean`
+- `(.venv-dev)> pre-commit run --all-files`  
+*No local modifications are taken into account, but use all hooks defined in `.pre-commit-config.yaml`*

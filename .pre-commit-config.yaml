@@ -1,7 +1,7 @@
 
 exclude: |
     (?x)^(
-        tests/resources/.* # Exclude files in resources as they are wrong for testing
+        tests/resources/.* # Exclude files in resources as they are intentionally wrong for testing
     )$
 
 repos:
