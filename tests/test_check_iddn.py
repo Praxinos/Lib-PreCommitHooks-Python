@@ -47,4 +47,3 @@ def test_integration( filename, expected_retval, tmp_path ):
     content = b'\xef\xbb\xbf' + b'#!/bin/bash\n' + reference_pathfile.read_bytes()
     pathfile.write_bytes( content )
     assert main( ( str(pathfile), ) ) == expected_retval
-
