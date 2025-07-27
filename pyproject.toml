@@ -32,6 +32,7 @@ check-single-newline-end-of-file = "pre_commit_hooks_checker.check_single_newlin
 check-utf8-wihtout-byte-order-marker = "pre_commit_hooks_checker.check_utf8_wihtout_byte_order_marker:main"
 check-no-trailing-spaces = "pre_commit_hooks_checker.check_no_trailing_spaces:main"
 check-copyright = "pre_commit_hooks_checker.check_copyright:main"
+check-iddn = "pre_commit_hooks_checker.check_iddn:main"
 
 ### TOX
 

@@ -28,14 +28,14 @@ def main(argv: Sequence[str] | None = None) -> int:
             if line.startswith( b'#!' ):
                 line = fd.readline()
 
-            # Copyright must be on the second line
-            line = fd.readline().rstrip( b'\r\n' ) # + remove end of line
+            # IDDN must be on the first line
+            line = line.rstrip( b'\r\n' ) # remove end of line
 
-            pattern = re.compile( rb'^(//|#) .*copyright ' + '©'.encode( 'utf-8' ) + rb'.*Praxinos.*publishing [0-9]{4}$' )
+            pattern = re.compile( rb'^(//|#) IDDN\.[A-Z]{2}\.[0-9]{3}\.[0-9]{6,7}\.[0-9]{3}\.[A-Z]\.[A-Z]\.[0-9]{4}\.[0-9]{3}\.[0-9]{5}$' )
 
             match = re.match( pattern, line )
             if not match:
-                print( f'{pathfile}: doesn\'t contain a valid copyright' )
+                print( f'{pathfile}: doesn\'t contain a valid iddn' )
                 retv = 1
 
     return retv

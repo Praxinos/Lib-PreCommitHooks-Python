@@ -36,9 +36,9 @@
     language: python
     types: [text]
 
-# -   id: check-iddn-exists
-#     name: check-iddn-exists
-#     description: ensure files start with iddn.
-#     entry: check-iddn-exists
-#     language: python
-#     types: [text]
+-   id: check-iddn
+    name: check-iddn
+    description: ensure files start with iddn.
+    entry: check-iddn
+    language: python
+    types: [text]
