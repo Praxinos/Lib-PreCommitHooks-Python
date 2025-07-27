@@ -22,7 +22,7 @@ https://pre-commit.com/
 - `py -m venv .venv-dev`
 - `.\.venv-dev\Scripts\activate`
 - `python.exe -m pip install --upgrade pip`
-- `pip install -r .\.requirements-dev.txt`
+- `pip install --upgrade -r .\.requirements-dev.txt`
 
 ### Testing
 Use all hooks defined in `.pre-commit-hooks.yaml`:

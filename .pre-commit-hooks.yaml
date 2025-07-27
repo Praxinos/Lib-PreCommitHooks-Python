@@ -29,16 +29,16 @@
     language: python
     types: [text]
 
+-   id: check-copyright
+    name: check-copyright
+    description: ensure files start with copyright.
+    entry: check-copyright
+    language: python
+    types: [text]
+
 # -   id: check-iddn-exists
 #     name: check-iddn-exists
 #     description: ensure files start with iddn.
 #     entry: check-iddn-exists
-#     language: python
-#     types: [text]
-
-# -   id: check-copyright-exists
-#     name: check-copyright-exists
-#     description: ensure files start with copyright.
-#     entry: check-copyright-exists
 #     language: python
 #     types: [text]
