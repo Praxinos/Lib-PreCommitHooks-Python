@@ -39,8 +39,6 @@ check-iddn = "pre_commit_hooks_checker.check_iddn:main"
 [tool.tox]
 envlist = [
     "tests",
-    # "pc-local",
-    # "pc-remote",
     ]
 
 [tool.tox.env_run_base]
@@ -57,24 +55,3 @@ commands = [
     [ "coverage", "run", "-m", "pytest", { replace = "posargs", default = ["tests"], extend = true } ],
     [ "coverage", "report" ],
     ]
-
-# [tool.tox.env.pc-local]
-# description = "run pre-commit check on code base"
-# skip_install = true
-# deps = [
-#     "pre-commit",
-#     ]
-# commands = [
-#     [ "pre-commit", "try-repo", ".", "--all-files" ], # This will call only hooks inside .pre-commit-hooks.yaml
-#     ]
-
-# [tool.tox.env.pc-remote]
-# description = "run pre-commit check (from remote repository) on code base"
-# skip_install = true
-# deps = [
-#     "pre-commit",
-#     ]
-# commands = [
-#     [ "pre-commit", "clean" ], # To be able to get the last version of the branch
-#     [ "pre-commit", "run", "--all-files" ], # This will clone and use the repositories inside .pre-commit-config.yaml
-#     ]

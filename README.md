@@ -30,34 +30,18 @@ Check if all files starts with a valid iddn comment
 - https://pre-commit.com/
 - https://github.com/pre-commit/pre-commit-hooks
 
+## Setup
+- `py -m venv .venv-dev` *(if it doesn't exist)*
+- `.\.venv-dev\Scripts\activate`
+- `(.venv-dev)> python.exe -m pip install --upgrade pip`
+- `(.venv-dev)> pip install --upgrade -r .\.requirements-dev.txt`
+- `(.venv-dev)> pre-commit install`
+
+## Clean
+
+To force updating the `dev` branch of the cached repository:
+- `(.venv-dev)> pre-commit clean`
+
 ## Tox *(for unit tests)*
 
-### Setup
-- `py -m venv .venv-dev` *(if it doesn't exist)*
-- `.\.venv-dev\Scripts\activate`
-- `(.venv-dev)> python.exe -m pip install --upgrade pip`
-- `(.venv-dev)> pip install --upgrade -r .\.requirements-dev.txt`
-
-### Usage
-- `(.venv-dev)> tox`
-
-To quickly test specific environment:  
-*(which is one of the values in `pyproject.toml` in `envlist` attribute)*
-- `(.venv-dev)> tox -e {my_specific_env}`
-
-## Use these hooks on this repository itself
-
-### Setup
-- `py -m venv .venv-dev` *(if it doesn't exist)*
-- `.\.venv-dev\Scripts\activate`
-- `(.venv-dev)> python.exe -m pip install --upgrade pip`
-- `(.venv-dev)> pip install --upgrade -r .\.requirements-dev.txt`
-
-### Use this local version of hooks
-- `(.venv-dev)> pre-commit try-repo . --all-files`  
-*All local modifications are taken into account, but use **only** hooks defined in `.pre-commit-hooks.yaml`*
-
-### Use the github version of hooks
-- `(.venv-dev)> pre-commit clean`
-- `(.venv-dev)> pre-commit run --all-files`  
-*No local modifications are taken into account, but use all hooks defined in `.pre-commit-config.yaml`*
+- `(.venv-dev)> tox`  
