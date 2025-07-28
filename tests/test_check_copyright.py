@@ -16,12 +16,16 @@ def _GetResources() -> Path:
         (
             ( 'copyright.ok.cpp.txt', 0 ),
             ( 'copyright.ok.python.txt', 0 ),
+            ( 'copyright.ok.bat.txt', 0 ),
+            ( 'copyright.ok.bat2.txt', 0 ),
+            ( 'copyright.ok.html.txt', 0 ),
 
             ( 'copyright.wrong.empty.txt', 1 ),
             ( 'copyright.wrong.only-newlines.txt', 1 ),
             ( 'copyright.wrong.first-line.txt', 1 ),
             ( 'copyright.wrong.third-line.txt', 1 ),
             ( 'copyright.wrong.comment.txt', 1 ),
+            ( 'copyright.wrong.comment-html.txt', 1 ),
             ( 'copyright.wrong.key-copyright-missing.txt', 1 ),
             ( 'copyright.wrong.key-c-missing.txt', 1 ),
             ( 'copyright.wrong.key-praxinos-missing.txt', 1 ),

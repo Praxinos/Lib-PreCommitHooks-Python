@@ -31,10 +31,13 @@ def main(argv: Sequence[str] | None = None) -> int:
             # IDDN must be on the first line
             line = line.rstrip( b'\r\n' ) # remove end of line
 
-            pattern = re.compile( rb'^(//|#) IDDN\.[A-Z]{2}\.[0-9]{3}\.[0-9]{6,7}\.[0-9]{3}\.[A-Z]\.[A-Z]\.[0-9]{4}\.[0-9]{3}\.[0-9]{5}$' )
+            iddn_pattern = rb'IDDN' + rb'[.]FR' + rb'[.]\d{3,}' + rb'[.]\d{6,}' + rb'[.]\d{3,}' + rb'[.][RDSCX]' + rb'[.][PCAX]' + rb'[.]\d{4}' + rb'[.]\d{3,}' + rb'[.]\d{5,}'
+            pattern_single = re.compile( rb'^(//|#|;|@[Rr][Ee][Mm]) ' + iddn_pattern + rb'$' )
+            pattern_multiple = re.compile( rb'^(<!--) ' + iddn_pattern + rb' (-->)$' )
 
-            match = re.match( pattern, line )
-            if not match:
+            match_single = re.match( pattern_single, line )
+            match_multiple = re.match( pattern_multiple, line )
+            if not match_single and not match_multiple:
                 print( f'{pathfile}: doesn\'t contain a valid iddn' )
                 retv = 1
 

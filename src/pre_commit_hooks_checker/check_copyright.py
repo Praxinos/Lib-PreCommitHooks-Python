@@ -31,10 +31,13 @@ def main(argv: Sequence[str] | None = None) -> int:
             # Copyright must be on the second line
             line = fd.readline().rstrip( b'\r\n' ) # + remove end of line
 
-            pattern = re.compile( rb'^(//|#) .*copyright ' + '©'.encode( 'utf-8' ) + rb'.*Praxinos.*publishing [0-9]{4}$' )
+            copyright_pattern = rb'.*copyright ' + '©'.encode( 'utf-8' ) + rb'.*Praxinos.*publishing [0-9]{4}'
+            pattern_single = re.compile( rb'^(//|#|;|@[Rr][Ee][Mm]) ' + copyright_pattern + rb'$' )
+            pattern_multiple = re.compile( rb'^(<!--) ' + copyright_pattern + rb' (-->)$' )
 
-            match = re.match( pattern, line )
-            if not match:
+            match_single = re.match( pattern_single, line )
+            match_multiple = re.match( pattern_multiple, line )
+            if not match_single and not match_multiple:
                 print( f'{pathfile}: doesn\'t contain a valid copyright' )
                 retv = 1
 

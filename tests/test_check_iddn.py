@@ -16,11 +16,15 @@ def _GetResources() -> Path:
         (
             ( 'iddn.ok.cpp.txt', 0 ),
             ( 'iddn.ok.python.txt', 0 ),
+            ( 'iddn.ok.bat.txt', 0 ),
+            ( 'iddn.ok.bat2.txt', 0 ),
+            ( 'iddn.ok.html.txt', 0 ),
 
             ( 'iddn.wrong.empty.txt', 1 ),
             ( 'iddn.wrong.only-newlines.txt', 1 ),
             ( 'iddn.wrong.second-line.txt', 1 ),
             ( 'iddn.wrong.comment.txt', 1 ),
+            ( 'iddn.wrong.comment-html.txt', 1 ),
             ( 'iddn.wrong.key-missing.txt', 1 ),
             ( 'iddn.wrong.with-prefix.txt', 1 ),
             ( 'iddn.wrong.with-postfix.txt', 1 ),
