@@ -35,6 +35,11 @@
     entry: check-copyright
     language: python
     types: [text]
+    exclude: |
+      (?x)^(
+          \.requirements.*|
+          \.vscode/.*
+      )$
 
 -   id: check-iddn
     name: check-iddn
@@ -42,3 +47,8 @@
     entry: check-iddn
     language: python
     types: [text]
+    exclude: |
+      (?x)^(
+          \.requirements.*|
+          \.vscode/.*
+      )$

@@ -41,6 +41,7 @@ Check if all files starts with a valid iddn comment
 
 To force updating the `dev` branch of the cached repository:
 - `(.venv-dev)> pre-commit clean`
+- `(.venv-dev)> pre-commit run --all-files`
 
 ## Tox *(for unit tests)*
 

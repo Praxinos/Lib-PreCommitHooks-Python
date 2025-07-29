@@ -10,7 +10,6 @@ repos:
     hooks:
     - id: mixed-line-ending
       args: [--fix=no]
-
     - id: check-json
     - id: check-toml
     - id: check-xml
