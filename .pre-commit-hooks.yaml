@@ -35,11 +35,9 @@
     entry: check-copyright
     language: python
     types: [text]
-    exclude: |
-      (?x)^(
-          \.requirements.*|
-          \.vscode/.*
-      )$
+    # /!Warning!\
+    # exclude_types/exclude will be overriden if it is also used in the final .pre-commit-config.yaml file
+    exclude_types: [json]       # Can't have comment
 
 -   id: check-iddn
     name: check-iddn
@@ -47,8 +45,6 @@
     entry: check-iddn
     language: python
     types: [text]
-    exclude: |
-      (?x)^(
-          \.requirements.*|
-          \.vscode/.*
-      )$
+    # /!Warning!\
+    # exclude_types/exclude will be overriden if it is also used in the final .pre-commit-config.yaml file
+    exclude_types: [json]       # Can't have comment
