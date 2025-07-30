@@ -1,0 +1,15 @@
+{
+    "FileVersion" : 3,
+    "Modules" :
+    [
+        {
+            "Name" : "UObjectPlugin",
+            "Type" : "Runtime",
+            "LoadingPhase" : "Default"
+        },
+        {
+            "Type" : "Editor",
+            "LoadingPhase" : "Default"
+        }
+    ]
+}

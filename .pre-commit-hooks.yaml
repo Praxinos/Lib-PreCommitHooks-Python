@@ -48,3 +48,11 @@
     # /!Warning!\
     # exclude_types/exclude will be overriden if it is also used in the final .pre-commit-config.yaml file
     exclude_types: [json]       # Can't have comment
+
+-   id: check-uplugin
+    name: check-uplugin
+    description: ensure files are uplugin.
+    entry: check-uplugin
+    language: python
+    types: [text]
+    files: \.uplugin$

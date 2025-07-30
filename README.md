@@ -1,7 +1,7 @@
 
 # pre-commit hooks checker
 All hooks don't modify files.  
-There are *read-only* checker.  
+They are *read-only* checkers.  
 
 ## check-utf8-wihtout-byte-order-marker hook
 Check if all files are utf8 **without** BOM
@@ -20,6 +20,9 @@ Check if all files starts with a valid copyright comment
 
 ## check iddn hook
 Check if all files starts with a valid iddn comment
+
+## check uplugin hook
+Check if uplugin files are valid
 
 
 

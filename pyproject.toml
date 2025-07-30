@@ -33,6 +33,7 @@ check-utf8-wihtout-byte-order-marker = "pre_commit_hooks_checker.check_utf8_wiht
 check-no-trailing-spaces = "pre_commit_hooks_checker.check_no_trailing_spaces:main"
 check-copyright = "pre_commit_hooks_checker.check_copyright:main"
 check-iddn = "pre_commit_hooks_checker.check_iddn:main"
+check-uplugin = "pre_commit_hooks_checker.check_uplugin:main"
 
 ### TOX
 
